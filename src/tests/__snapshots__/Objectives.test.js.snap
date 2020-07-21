@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Objective Element test 1`] = `
+<div
+  className="individual-objectives"
+>
+  <div
+    className="individual-objective-containers"
+  >
+    <div
+      className="container-titles"
+    >
+      Objectives
+    </div>
+    <div
+      className="objective-content"
+    >
+      Total number of Objectives
+    </div>
+    <div
+      className="count count-blue"
+    />
+  </div>
+  <div
+    className="individual-objective-containers"
+  >
+    <div
+      className="container-titles"
+    >
+      Objectives achieved
+    </div>
+    <div
+      className="objective-content"
+    >
+      Objectives over 70% progress
+    </div>
+    <div
+      className="count count-green"
+    />
+  </div>
+  <div
+    className="individual-objective-containers"
+  >
+    <div
+      className="container-titles"
+    >
+      Objectives at risk
+    </div>
+    <div
+      className="objective-content"
+    >
+      Objectives below 20% progress
+    </div>
+    <div
+      className="count count-red"
+    />
+  </div>
+  <div
+    className="individual-objective-containers"
+  >
+    <div
+      className="container-titles"
+    >
+      Objectives on track
+    </div>
+    <div
+      className="objective-content"
+    >
+      Objectives with 20% - 70% progress
+    </div>
+    <div
+      className="count count-orange"
+    />
+  </div>
+</div>
+`;

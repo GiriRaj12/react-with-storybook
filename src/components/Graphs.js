@@ -60,7 +60,6 @@ function getChartsData(callback) {
     fetch("http://localhost:8080/graphData")
         .then(res => res.json())
         .then(res => {
-            console.log(res);
             let options = {
                 xAxis: {
                     categories: res.message.quarter
@@ -82,3 +81,4 @@ function getChartsData(callback) {
         })
 }
 export default Graphs;
+export { getChartsData, getActivityView, getActivity }

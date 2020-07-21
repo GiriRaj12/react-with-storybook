@@ -5,8 +5,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
-import Dashboard from './Components/Dashboard.js';
-import SidebarContent from './Components/SidebarContent';
+import Dashboard from './components/Dashboard.js';
+import SidebarContent from './components/SidebarContent';
 import { faChartBar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

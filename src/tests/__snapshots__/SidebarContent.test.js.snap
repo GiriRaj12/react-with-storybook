@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar content test 1`] = `
+<a
+  className="sidebar-content"
+  href="/dashboard"
+>
+  S
+  <span
+    className="sidebar-content-name"
+  >
+    Something
+  </span>
+</a>
+`;

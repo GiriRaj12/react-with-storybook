@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import '../ComponentStyles/dashboard.scss';
+import '../componentStyles/dashboard.scss';
 
 function Dashboard() {
     const Objectives = React.lazy(() => import('./Objectives.js'))

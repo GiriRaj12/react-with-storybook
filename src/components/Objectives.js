@@ -5,7 +5,8 @@ function Objectives() {
 
     useEffect(() => {
         getIndividualObjectives(setObjectives);
-    }, []);
+    }, []
+    );
 
     return <div className="individual-objectives">
         {designIndividualObjectives("Objectives", "Total number of Objectives", objectives.totalObjectives, "count count-blue")}
