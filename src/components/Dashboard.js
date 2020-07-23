@@ -2,8 +2,10 @@ import React, { Suspense } from 'react';
 import '../componentStyles/dashboard.scss';
 
 function Dashboard() {
-    const Objectives = React.lazy(() => import('./Objectives.js'))
-    const Graphs = React.lazy(() => import('./Graphs'))
+    const Objectives = React.lazy(() => import('./componentViews/Objectives.js'));
+
+    const Graphs = React.lazy(() => import('./componentViews/Graphs'));
+
     return (<div className="container-background">
         <div className="user-details">
             <div className="name-conatiner">
@@ -21,6 +23,7 @@ function Dashboard() {
                 <Graphs></Graphs>
             </Suspense>
         </div>
+
     </div>)
 }
 export default Dashboard;

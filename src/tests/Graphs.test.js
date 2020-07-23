@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Graphs from '../components/Graphs.js';
+import Graphs from '../components/componentViews/Graphs.js';
 
 test('Graphs in the document test', () => {
     const { container } = render(<Graphs></Graphs>);
@@ -8,12 +8,12 @@ test('Graphs in the document test', () => {
 })
 
 test('Get Activity Test', () => {
-    const { getActivity } = require('../components/Graphs.js')
+    const { getActivity } = require('../components/componentViews/Graphs.js')
     expect(getActivity());
 })
 
 test('Get Activity Element Test', () => {
-    const { getActivityView } = require('../components/Graphs.js');
+    const { getActivityView } = require('../components/componentViews/Graphs.js');
     let obj = {
         'id': 'id',
         'entityName': 'Clary',
@@ -24,7 +24,7 @@ test('Get Activity Element Test', () => {
 })
 
 test('Get Activity Element Test', () => {
-    const { getChartsData } = require('../components/Graphs.js');
+    const { getChartsData } = require('../components/componentViews/Graphs.js');
     expect(getChartsData());
 
 })

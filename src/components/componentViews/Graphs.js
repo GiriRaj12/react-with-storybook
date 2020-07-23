@@ -36,6 +36,7 @@ function Graphs(props) {
 }
 
 function getActivityView(e) {
+
     return <div className="individual-activity-logs" key={e.id}>
         <div className="activity-log-name-holder">
             {String(e.entityName).substring(0, 1)}
