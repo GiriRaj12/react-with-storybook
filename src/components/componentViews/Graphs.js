@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import {get} from '../services/HttpSrevices.js';
+import {chartOptionsTemplate} from '../ComponentConstants.js';
 
 function Graphs(props) {
     const [activityLog, setActivitiyLog] = useState([]);
@@ -50,35 +52,19 @@ function getActivityView(e) {
 }
 
 function getActivity(callback) {
-    fetch("http://localhost:8080/activityLog")
-        .then(res => res.json())
+    get("/activityLog")
         .then(res => {
             callback(res);
         })
 }
 
 function getChartsData(callback) {
-    fetch("http://localhost:8080/graphData")
-        .then(res => res.json())
+    get("/graphData")
         .then(res => {
-            let options = {
-                xAxis: {
-                    categories: res.message.quarter
-                },
-                title: {
-                    text: 'OKR Chart'
-                },
-                series: [{
-                    name: 'Objectives',
-                    type: 'line',
-                    data: res.message.objectiveCount,
-                }, {
-                    name: 'Okr Scores',
-                    type: 'line',
-                    data: res.message.okrScore,
-                }]
-            }
-            callback(options);
+            chartOptionsTemplate.categories = res.message.quarter;
+            chartOptionsTemplate.series[0].data = res.message.objectiveCount;
+            chartOptionsTemplate.series[1].data = res.message.okrScore;
+            callback(chartOptionsTemplate);
         })
 }
 export default Graphs;

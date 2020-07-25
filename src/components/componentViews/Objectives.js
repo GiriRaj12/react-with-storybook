@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {get} from '../services/HttpSrevices.js';
 
 function Objectives() {
     const [objectives, setObjectives] = useState({});
@@ -17,12 +18,7 @@ function Objectives() {
 }
 
 function getIndividualObjectives(callback) {
-
-    fetch("http://localhost:8080/objectives")
-        .then(res => res.json())
-        .then(res => {
-            callback(res);
-        })
+    get('/objectives').then(res => callback(res));
 }
 
 function designIndividualObjectives(title, content, achieved, countClass) {
