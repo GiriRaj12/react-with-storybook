@@ -4,6 +4,7 @@ import HighchartsReact from 'highcharts-react-official';
 import {get} from '../services/HttpSrevices.js';
 import {chartOptionsTemplate} from '../ComponentConstants.js';
 import ActivityView from './ActivityView.js';
+import Log from '../services/Log.js';
 
 function Graphs(props) {
     const [activityLog, setActivitiyLog] = useState([]);
@@ -51,6 +52,7 @@ function getChartsData(callback) {
             chartOptionsTemplate.categories = res.message.quarter;
             chartOptionsTemplate.series[0].data = res.message.objectiveCount;
             chartOptionsTemplate.series[1].data = res.message.okrScore;
+            Log.info(res,"Charts Component");
             callback(chartOptionsTemplate);
         })
 }

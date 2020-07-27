@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+if (process.env.NODE_ENV !== 'production') {
+  localStorage.setItem('debug', 'awesome-react-app:*');
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {get} from '../services/HttpSrevices.js';
+import Log from '../services/Log.js';
 
 function Objectives() {
     const [objectives, setObjectives] = useState({});
@@ -18,7 +19,10 @@ function Objectives() {
 }
 
 function getIndividualObjectives(callback) {
-    get('/objectives').then(res => callback(res));
+    get('/objectives').then(res => {
+        Log.warn(res,'Objectives component');
+        callback(res);
+    });
 }
 
 function designIndividualObjectives(title, content, achieved, countClass) {
