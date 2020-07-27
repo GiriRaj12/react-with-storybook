@@ -1,5 +1,3 @@
-import React from 'react';
-import { faOm } from '@fortawesome/free-solid-svg-icons';
 
 const payload  = {
     method:'POST',
@@ -36,10 +34,10 @@ function formURL(extension, params){
 }
 
 function getUnitedParams(params){
-    resultStr = new String();
+    let resultStr = String('');
     if(params){
         let i = 0;
-        for(key in params){
+        for(let key in params){
             if(i === 0){
                 resultStr = resultStr + "?"+ key +"="+ params[key];
             }
